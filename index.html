@@ -159,8 +159,8 @@
         return destinations[0].url;
     }
 
-    // Thời gian chờ trước khi hiện nút và bắt đầu đếm ngược nhảy (ms)
-    const DELAY = 5000; // 5 giây
+    // Thời gian chờ = 0, hiện ngay
+    const DELAY = 0;
 
     const redirectArea = document.getElementById('redirectArea');
     const redirectBtn = document.getElementById('redirectBtn');
@@ -176,13 +176,13 @@
             redirectBtn.classList.add('show');
         }, 100);
 
-        // Tự động nhảy sau khi nút hiện khoảng 2 giây
+        // Tự động nhảy sau khi nút hiện khoảng 1.5 giây (để thấy nút)
         setTimeout(() => {
             main.classList.add('exit');
             setTimeout(() => {
                 window.location.href = targetUrl;
             }, 800);
-        }, 2000);
+        }, 1500);
 
     }, DELAY);
 </script>

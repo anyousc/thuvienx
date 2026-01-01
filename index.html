@@ -24,7 +24,10 @@
             background: rgba(255,255,255, 0.93);
             backdrop-filter: blur(14px);
             border-radius: 20px;
-            padding: 60px 70px 70px;
+            /* Thu nhỏ bề ngang đáng kể */
+            max-width: 320px;          /* <-- thay đổi chính ở đây */
+            width: 90%;
+            padding: 50px 30px 60px;   /* padding nhỏ hơn để gọn */
             box-shadow: 0 16px 40px rgba(0,0,0,0.12);
             text-align: center;
             
@@ -43,9 +46,9 @@
 
         .loader {
             position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 32px;
+            width: 110px;              /* thu nhỏ vòng tròn */
+            height: 110px;
+            margin: 0 auto 28px;
         }
 
         .spinner {
@@ -66,16 +69,16 @@
             inset: 0;
             display: grid;
             place-items: center;
-            font-size: 52px;
+            font-size: 46px;           /* chữ 18+ nhỏ hơn chút */
             font-weight: 900;
             color: #222;
             animation: fadeIn 1.8s ease-out forwards 0.6s;
         }
 
         .title {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
             color: #111;
             text-transform: uppercase;
             animation: fadeIn 1.6s ease-out forwards 1s;
@@ -91,9 +94,10 @@
         }
 
         .footer {
-            margin-top: 40px;
+            margin-top: 32px;
             font-size: 13px;
             color: #555;
+            line-height: 1.4;
         }
 
         .footer a {
@@ -118,7 +122,7 @@
     <div class="title">THƯ VIỆN X</div>
     
     <div class="footer">
-        Liên hệ quảng cáo trên Telegram: 
+        Liên hệ quảng cáo trên Telegram: <br>
         <a href="https://t.me/anyousc" target="_blank">Anyousc</a>
     </div>
 </div>
@@ -146,7 +150,7 @@
         setTimeout(() => {
             window.location.href = getRandomDestination();
         }, 1000);
-    }, 00000);
+    }, 0000);
 </script>
 </body>
 </html>
